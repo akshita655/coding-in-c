@@ -6,10 +6,10 @@ void merge(int arr[],int lb, int q,int ub){
 	int n = q-lb+1;
 	int m = ub-q;
 	int z[n+1],x[m+1];
-	for(i=1;i<=n;i++){
+	for(i=1;i<=n;i++){                  // 0 based -> left + i
 		z[i] = arr[lb+i-1];
 	}
-	for(j=1;j<=m;j++){
+	for(j=1;j<=m;j++){                 // 0 based -> mid + 1 + j
 		x[j] = arr[j+q];
 	}
 	z[n+1] = INFINITY;
