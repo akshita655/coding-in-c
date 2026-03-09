@@ -11,6 +11,7 @@ This repository is created for learning, practicing problem-solving, and strengt
 - Stack (Array & Implementation)
 - Queue
 - Linked List
+- Binary Tree
 
 ### 🔹 Algorithms
 
