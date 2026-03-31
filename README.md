@@ -12,6 +12,7 @@ This repository is created for learning, practicing problem-solving, and strengt
 - Queue
 - Linked List
 - Binary Tree
+- Binary Search Tree
 
 ### 🔹 Algorithms
 
@@ -23,7 +24,6 @@ This repository is created for learning, practicing problem-solving, and strengt
 - Bubble Sort
 - Selection Sort
 - Insertion Sort
-
 - Dutch National Flag Algorithm
 
 ---
