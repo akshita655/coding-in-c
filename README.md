@@ -13,6 +13,7 @@ This repository is created for learning, practicing problem-solving, and strengt
 - Linked List
 - Binary Tree
 - Binary Search Tree
+- Sparse Matrix
 
 ### 🔹 Algorithms
 
