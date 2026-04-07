@@ -1,0 +1,73 @@
+//ANTI-CLOCK WISE BOUNDARY OREDER TRAVERSAL
+
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node{
+    int data;
+    struct node *left;
+    struct node *right;
+};
+
+struct node* create_node(){
+    int value;
+    printf("Enter data (-1 for no node): ");
+    scanf("%d",&value);
+    if(value == -1){
+        return NULL;
+    }
+    struct node* newnode = (struct node*)malloc(sizeof(struct node));
+    newnode->data = value;
+    printf("Enter left child of %d:\n", value);
+    newnode->left = create_node();
+    printf("Enter right child of %d:\n", value);
+    newnode->right = create_node();
+    return newnode;
+}
+
+void print_left(struct node* root){
+    if(root == NULL) return;
+    if(root->left != NULL){
+        printf(" %d", root->data);
+        print_left(root->left);
+    }
+    else if(root->right != NULL){
+        printf(" %d", root->data);
+        print_left(root->right);
+    }
+}
+
+void leaf_nodes(struct node* root){
+    if(root == NULL) return;
+    if(root->left == NULL && root->right == NULL){
+        printf(" %d", root->data);
+        return;
+    }
+    leaf_nodes(root->left);
+    leaf_nodes(root->right);
+}
+
+void print_right(struct node* root){
+    if(root == NULL) return;
+    if(root->right != NULL){
+        print_right(root->right);
+        printf(" %d", root->data);
+    }
+    else if(root->left != NULL){
+        print_right(root->left);
+        printf(" %d", root->data);
+    }
+}
+
+int main(){
+    struct node* root;
+    root = create_node(); 
+    printf("\nBoundary Traversal:");
+    if(root != NULL){
+        printf(" %d", root->data);   
+        print_left(root->left);
+        leaf_nodes(root);
+        print_right(root->right);
+    }
+    return 0;
+}
