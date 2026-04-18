@@ -46,6 +46,7 @@ The main goal of this repository is to:
 ---
 
 ## 📂 Repository Structure
+```bash
 coding-in-c/
 │
 ├── Stack/
@@ -53,7 +54,14 @@ coding-in-c/
 ├── LinkedList/
 ├── Searching_Techniques/
 ├── Sorting_Techniques/
-└── Dutch_National_Flag/
+├── Binary_Tree/
+├── Binary_Search_Tree/
+├── Dutch_National_Flag/
+├── Sparse_Matrix/
+├── Tower_of_hanoi/
+│
+└── README.md
+```
 
 
 Each folder contains clean and structured C implementations of the respective topic.
