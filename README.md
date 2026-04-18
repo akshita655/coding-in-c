@@ -40,8 +40,8 @@ The main goal of this repository is to:
 ---
 
 ## 🛠️ Tech Stack
-- Language: C
-- Platform: GCC / Turbo C
+- Language: C, C++
+- Platform: Dev-C++
 
 ---
 
