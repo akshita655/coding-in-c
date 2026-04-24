@@ -24,7 +24,8 @@ This repository is created for learning, practicing problem-solving, and strengt
 #### Sorting Techniques
 - Bubble Sort
 - Selection Sort
-- Insertion Sort
+- Merge Sort
+- Quick Sort
 - Dutch National Flag Algorithm
 
 ---
