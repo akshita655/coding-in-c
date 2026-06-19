@@ -15,6 +15,7 @@ This repository is created for learning, practicing problem-solving, and strengt
 - Binary Search Tree
 - Sparse Matrix
 - Depth First Search
+- Breadth First Search
 
 ### 🔹 Algorithms
 
