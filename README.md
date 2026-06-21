@@ -1,4 +1,4 @@
-# 💻 Coding in C
+# 💻 Coding in C / C++
 
 A structured collection of fundamental **Data Structures and Algorithms implemented in C**.  
 This repository is created for learning, practicing problem-solving, and strengthening core programming concepts.
