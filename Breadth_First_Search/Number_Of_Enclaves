@@ -1,0 +1,45 @@
+int dfs(int** grid, int gridSize, int* gridColSize, int i, int j){
+    if(i < 0 || j < 0 || i >= gridSize || j >= gridColSize[0]){
+        return 0;
+    }
+    if(grid[i][j] == 0 || grid[i][j] == -1){
+        return 0;
+    }
+    grid[i][j] = -1;
+    int area = 1;
+    area += dfs(grid, gridSize, gridColSize, i+1, j);
+    area += dfs(grid, gridSize, gridColSize, i-1, j);
+    area += dfs(grid, gridSize, gridColSize, i, j+1);
+    area += dfs(grid, gridSize, gridColSize, i, j-1);
+    return area;
+}
+
+int numEnclaves(int** grid, int gridSize, int* gridColSize) {
+    int total = 0;
+    for(int i = 0; i < gridSize; i++){
+        if(grid[i][0] == 1){
+            dfs(grid, gridSize, gridColSize, i, 0);
+        }
+        if(grid[i][gridColSize[0] - 1] == 1){
+            dfs(grid, gridSize, gridColSize, i, gridColSize[0] - 1);
+        }
+    }
+    // Remove boundary-connected land from first and last row
+    for(int j = 0; j < gridColSize[0]; j++){
+        if(grid[0][j] == 1){
+            dfs(grid, gridSize, gridColSize, 0, j);
+        }
+        if(grid[gridSize - 1][j] == 1){
+            dfs(grid, gridSize, gridColSize, gridSize - 1, j);
+        }
+    }
+    // Count remaining land cells
+    for(int i = 0; i < gridSize; i++){
+        for(int j = 0; j < gridColSize[0]; j++){
+            if(grid[i][j] == 1){
+                total++;
+            }
+        }
+    }
+    return total;
+}
