@@ -1,0 +1,30 @@
+class Solution {
+public:
+    void dfs(int curr, vector<bool> &visited, vector<vector<pair<int,int>>> &graph, int &count){
+        visited[curr] = true;
+        for(auto [neighbour, direction] : graph[curr]){
+            if(visited[neighbour]){
+                continue;
+            }
+            if(direction == 1){
+                count++;
+            }
+            dfs(neighbour, visited, graph, count);
+        }
+    }
+    int minReorder(int n, vector<vector<int>>& connections) {
+        vector<vector<pair<int,int>>> graph(n);
+        int count = 0;
+        for(auto c: connections){
+            int a = c[0];
+            int b = c[1];
+            graph[a].push_back({b,1});
+            graph[b].push_back({a,0});
+        }
+        vector<bool> visited(n, false);
+        for(int i=0;i<n;i++){
+            dfs(i, visited, graph, count);
+        }
+        return count;
+    }
+};
