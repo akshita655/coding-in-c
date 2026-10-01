@@ -30,6 +30,8 @@ This repository is created for learning, practicing problem-solving, and strengt
 - Quick Sort
 - Dutch National Flag Algorithm
 
+#### Dynamic Programming
+
 ---
 
 ## 🎯 Objective
